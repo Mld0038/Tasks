@@ -217,4 +217,3 @@ data(mtcars)
 boxplot(mpg~cyl, data=mycars)
 hist(mtcars$mpg)
 1
-
