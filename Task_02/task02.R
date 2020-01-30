@@ -25,6 +25,8 @@ beren2<-beren
 beren3 <- beren2[order(beren$age),]
 write.csv(beren3, "beren_new.csv", quote=F, row.names=FALSE)
 #Question 1: The two hypotheses are inappropriate because we only have data of him eating and napping at daycare and not for when he isn't at daycare.  So, you could not base an outcome to those hypotheses to be true when there is more data that should be accounted for.
+
+Feeds <- which(beren3$event == "bottle")
 avgMilk<-mean(beren3$value[Feeds])
 avgFeed<-tapply(beren3$value[Feeds], beren3$age[Feeds], mean)
 avgFeed
